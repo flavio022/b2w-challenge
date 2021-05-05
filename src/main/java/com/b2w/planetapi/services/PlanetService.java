@@ -10,8 +10,5 @@ public class PlanetService {
     @Autowired
     private PlanetRepositories planetRepositories;
 
-    public Planet save(Planet planet) {
-        planet = planetRepositories.save(planet);
-        return planet;
-    }
+
 }
