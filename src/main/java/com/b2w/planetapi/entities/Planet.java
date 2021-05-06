@@ -20,15 +20,18 @@ public class Planet implements Serializable {
     @DynamoDBAttribute
     private String terreno;
 
+    @DynamoDBAttribute
+    private int aparicoes;
+
     public Planet(){
 
     }
 
-    public Planet(String id, String nome, String clima,String terreno){
+    public Planet(String id, String nome, String clima, String terreno,int aparicoes ){
         this.id = id;
         this.nome = nome;
         this.clima = clima;
-
+        this.aparicoes = aparicoes;
     }
 
     public String getId() {
@@ -61,6 +64,14 @@ public class Planet implements Serializable {
 
     public void setTerreno(String terreno) {
         this.terreno = terreno;
+    }
+
+    public int getAparicoes() {
+        return aparicoes;
+    }
+
+    public void setAparicoes(int aparicoes) {
+        this.aparicoes = aparicoes;
     }
 
     @Override
